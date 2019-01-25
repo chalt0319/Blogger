@@ -14,4 +14,15 @@
  *= require_self
  */
 
- 
+
+ header {
+   background-color: #cccccc;
+   padding: 15px;
+   width: 100vw;
+   margin-left: -10px;
+   margin-top: -10px;
+ }
+
+ .header_links {
+   padding-right: 15px;
+ }
