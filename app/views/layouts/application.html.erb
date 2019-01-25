@@ -12,9 +12,18 @@
   <body>
     <header>
       <a class="header_links" href="/">Home</a>
-      <a class="header_links" href="/">Login</a>
-      <a class="header_links" href="/users/new">Create Account</a>
+      <%if session[:user_id]%>
+        <a class="header_links" href="/logout">Logout</a>
+      <%else%>
+        <a class="header_links" href="/login">Login</a>
+        <a class="header_links" href="/users/new">Create Account</a>
+      <%end%>
+
     </header>
+    <% flash.each do |name, msg| -%>
+       <%= content_tag :div, msg, class: name %>
+    <% end -%>
+
     <%= yield %>
   </body>
 </html>

@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root to: "application#welcome"
 
   post 'users' =>  'users#create'
-
-
+  get 'login' => 'users#login'
+  get 'logout' => 'users#logout'
 end
